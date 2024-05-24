@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Modularity_e1 {
 
 public static float avg(int[] nums) throws EmptyArray, NegArray { 
-    int sum = 0;
+    float sum = 0;
     if (nums == null || nums.length == 0)
         throw new EmptyArray();
     String nint = "";
