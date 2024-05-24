@@ -9,14 +9,14 @@ public static float avg(int[] nums) throws EmptyArray, NegArray {
         throw new EmptyArray();
     String nint = "";
     String ind = "";
-    int nind = 1;
+    int ind0 = 1;
     for(int n: nums) {
       if (n < 0) {
         nint += String.valueOf(n);
         nint += " ";
-        ind += String.valueOf(nind);
+        ind += String.valueOf(ind0);
         ind += " "; }
-        nind ++;}
+        ind0 ++;}
     if (nint.length() > 0) {
       throw new NegArray("", nint, ind);};
     for(int n: nums) sum += n;
