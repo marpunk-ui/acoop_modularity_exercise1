@@ -31,9 +31,9 @@ public static void main(String[] args) {
     System.out.println(result);} 
     catch(EmptyArray e) {} 
     catch(NegArray e) {
-    String nind = e.getNindeksit();
+    String nint = e.getNnumerot();
     String ind = e.getIndeksit();
-    ArrayList<String> nlista = new ArrayList<String>(Arrays.asList(nind.split(" ")));
+    ArrayList<String> nlista = new ArrayList<String>(Arrays.asList(nint.split(" ")));
     ArrayList<String> ilista = new ArrayList<String>(Arrays.asList(ind.split(" ")));  
     int pituus = ilista.size();
       for (int j=0; j<pituus; j++) {
@@ -53,14 +53,14 @@ public static void main(String[] args) {
 class EmptyArray extends Exception {}
 
 class NegArray extends Exception {
-  private String nindeksit;
+  private String nnumerot;
   private String indeksit;
-  public NegArray(String message, String nindeksit, String indeksit) {
+  public NegArray(String message, String nnumerot, String indeksit) {
     super(message);
-    this.nindeksit = nindeksit;
+    this.nnumerot = nnumerot;
     this.indeksit = indeksit;}
-  public String getNindeksit() {
-    return this.nindeksit;
+  public String getNnumerot() {
+    return this.nnumerot;
   }
   public String getIndeksit() {
     return this.indeksit;
